@@ -22,20 +22,17 @@ async function renderData() {
         const img = document.createElement('img');
         img.src = item.thumbnail;
 
-        const description = document.createElement('p');
-        description.classList.add('description');
-        description.textContent = ''; 
 
         
         img.addEventListener('click', () => {
           
-            window.location.href = `description.html?desc=${encodeURIComponent(item.description)}`;
+            window.location.href = `description.html?desc1=${encodeURIComponent(item.description)}&desc2=${encodeURIComponent(item.price)}`;
+
         });
 
         card.appendChild(title);
         card.appendChild(img);
-        card.appendChild(description); 
-
+        
         container.appendChild(card);
     });
 }
